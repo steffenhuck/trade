@@ -138,17 +138,16 @@ body {
   margin-top: -0.08em;
 }
 
-/* SPEAKER NAMES */
+/* SPEAKER + DIALOGUE STRUCTURE */
 
 .speaker {
   margin: 1.3em 0 0.3em;
+  margin-left: -1.4em;
   color: var(--accent-soft);
   font-variant: small-caps;
   letter-spacing: 0.09em;
   font-size: 1rem;
 }
-
-/* DIALOGUE */
 
 .line {
   margin-left: 1.4em;
@@ -167,6 +166,7 @@ body {
   text-align: center;
   font-size: 0.9rem;
   color: var(--light-muted);
+  font-style: italic;
 }
 
 .dedication a {
@@ -241,6 +241,7 @@ body {
 
   .speaker {
     margin-top: 1.2em;
+    margin-left: -1em;
     font-size: 0.98rem;
   }
 
