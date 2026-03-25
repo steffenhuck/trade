@@ -73,8 +73,8 @@ body {
 }
 
 .subtitle {
-  margin: 12px 0 0;
-  font-size: 1.08rem;
+  margin: 18px 0 10px;
+  font-size: 1.2rem;
   font-style: italic;
   color: var(--muted);
 }
