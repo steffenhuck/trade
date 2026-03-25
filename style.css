@@ -60,7 +60,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  line-height: 1.05;
+  line-height: 1.03;
 }
 
 .title-line {
@@ -73,24 +73,24 @@ body {
 }
 
 .subtitle {
-  margin: 18px 0 10px;
-  font-size: 1.2rem;
+  margin: 24px 0 14px;
+  font-size: 1.38rem;
   font-style: italic;
   color: var(--muted);
 }
 
 .cast-label {
-  margin: 28px 0 8px;
+  margin: 22px 0 8px;
   font-size: 0.92rem;
   color: var(--muted);
 }
 
 .cast-line {
   margin: 0 auto;
-  max-width: 680px;
+  max-width: 700px;
   font-size: 0.98rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.62;
   text-align: center;
 }
 
@@ -101,7 +101,7 @@ body {
 /* IMAGE */
 
 .hero-image {
-  margin: 40px auto 54px;
+  margin: 42px auto 56px;
   text-align: center;
 }
 
@@ -126,8 +126,6 @@ body {
   margin-top: 0;
   margin-bottom: 0.72em;
 }
-
-/* Create a real inner text block so the eye stops reading one single left edge */
 
 .stage-direction,
 .line,
@@ -182,9 +180,9 @@ body {
 
 .dedication {
   max-width: var(--text-width);
-  margin: 60px auto 16px;
+  margin: 62px auto 16px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--light-muted);
   font-style: italic;
 }
@@ -218,43 +216,81 @@ body {
   opacity: 0.8;
 }
 
+/* TABLET / SMALL LAPTOP */
+
+@media (max-width: 900px) {
+  :root {
+    --image-width: 100%;
+    --inner-text-width: 640px;
+    --speech-indent: 1.8em;
+    --speaker-shift: 1em;
+  }
+
+  .page {
+    padding: 22px 22px 72px;
+  }
+
+  .subtitle {
+    margin: 20px 0 12px;
+    font-size: 1.28rem;
+  }
+
+  .cast-label {
+    margin-top: 20px;
+  }
+
+  .hero-image {
+    margin: 36px auto 48px;
+  }
+}
+
 /* MOBILE */
 
 @media (max-width: 700px) {
   :root {
     --inner-text-width: 100%;
-    --speech-indent: 1.1em;
-    --speaker-shift: 0.7em;
+    --speech-indent: 1.35em;
+    --speaker-shift: 0.85em;
   }
 
   .page {
-    padding: 18px 16px 60px;
+    padding: 14px 16px 56px;
   }
 
   .play-header {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
+  }
+
+  .play-header h1 {
+    line-height: 1.02;
   }
 
   .title-line {
-    font-size: 1.9rem;
+    font-size: 2.05rem;
+  }
+
+  .title-line:first-child {
+    margin-bottom: 4px;
   }
 
   .subtitle {
-    margin-top: 10px;
-    font-size: 1rem;
+    margin: 18px 0 14px;
+    font-size: 1.32rem;
   }
 
   .cast-label {
-    margin-top: 24px;
-    font-size: 0.88rem;
-  }
-
-  .cast-line {
+    margin: 18px 0 8px;
     font-size: 0.92rem;
   }
 
+  .cast-line {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+
   .hero-image {
-    margin: 32px auto 42px;
+    margin: 30px auto 40px;
   }
 
   .hero-image img {
@@ -262,25 +298,34 @@ body {
   }
 
   .play-text {
-    font-size: 1.02rem;
+    font-size: 1.04rem;
+  }
+
+  .stage-direction {
+    margin-bottom: 1em;
   }
 
   .speaker {
-    font-size: 0.98rem;
-    margin-top: 1.2em;
+    margin-top: 1.25em;
+    margin-bottom: 0.28em;
+    font-size: 1rem;
+  }
+
+  .line {
+    padding-left: var(--speech-indent);
   }
 
   .dedication {
-    margin: 52px auto 14px;
-    font-size: 0.84rem;
+    margin: 50px auto 14px;
+    font-size: 0.9rem;
   }
 
   .footer {
-    margin-top: 32px;
+    margin-top: 28px;
   }
 
   .signature {
-    font-size: 0.86rem;
-    letter-spacing: 0.22em;
+    font-size: 0.88rem;
+    letter-spacing: 0.2em;
   }
 }
