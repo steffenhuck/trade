@@ -10,6 +10,10 @@
   --page-width: 1120px;
   --text-width: 760px;
   --image-width: 900px;
+
+  --inner-text-width: 620px;
+  --speech-indent: 2.1em;
+  --speaker-shift: 1.3em;
 }
 
 * {
@@ -119,7 +123,17 @@ body {
 }
 
 .play-text p {
-  margin: 0 0 0.72em;
+  margin-top: 0;
+  margin-bottom: 0.72em;
+}
+
+/* Create a real inner text block so the eye stops reading one single left edge */
+
+.stage-direction,
+.line,
+.speaker {
+  max-width: var(--inner-text-width);
+  margin-right: auto;
 }
 
 /* STAGE DIRECTIONS */
@@ -131,18 +145,23 @@ body {
 }
 
 .stage-direction {
-  margin: 0 0 0.95em;
+  margin-left: auto;
+  margin-bottom: 0.95em;
 }
 
 .stage-inline {
+  margin-left: auto;
   margin-top: -0.08em;
+  margin-bottom: 0.72em;
 }
 
 /* SPEAKER + DIALOGUE STRUCTURE */
 
 .speaker {
-  margin: 1.3em 0 0.3em;
-  margin-left: -1.4em;
+  margin-left: auto;
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
+  transform: translateX(calc(-1 * var(--speaker-shift)));
   color: var(--accent-soft);
   font-variant: small-caps;
   letter-spacing: 0.09em;
@@ -150,7 +169,8 @@ body {
 }
 
 .line {
-  margin-left: 1.4em;
+  margin-left: auto;
+  padding-left: var(--speech-indent);
   color: var(--ink);
 }
 
@@ -201,6 +221,12 @@ body {
 /* MOBILE */
 
 @media (max-width: 700px) {
+  :root {
+    --inner-text-width: 100%;
+    --speech-indent: 1.1em;
+    --speaker-shift: 0.7em;
+  }
+
   .page {
     padding: 18px 16px 60px;
   }
@@ -240,13 +266,8 @@ body {
   }
 
   .speaker {
-    margin-top: 1.2em;
-    margin-left: -1em;
     font-size: 0.98rem;
-  }
-
-  .line {
-    margin-left: 1em;
+    margin-top: 1.2em;
   }
 
   .dedication {
