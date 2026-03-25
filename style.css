@@ -249,12 +249,12 @@ body {
 @media (max-width: 700px) {
   :root {
     --inner-text-width: 100%;
-    --speech-indent: 1.35em;
-    --speaker-shift: 0.85em;
+    --speech-indent: 1.05em;
+    --speaker-shift: 0.35em;
   }
 
   .page {
-    padding: 14px 16px 56px;
+    padding: 18px 22px 56px;
   }
 
   .play-header {
@@ -299,10 +299,6 @@ body {
 
   .play-text {
     font-size: 1.04rem;
-  }
-
-  .stage-direction {
-    margin-bottom: 1em;
   }
 
   .speaker {
