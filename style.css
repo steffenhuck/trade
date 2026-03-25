@@ -30,7 +30,7 @@ body {
   line-height: 1.68;
 }
 
-/* OUTER PAGE */
+/* PAGE */
 
 .page {
   width: 100%;
@@ -61,15 +61,11 @@ body {
 
 .title-line {
   display: block;
+  font-size: clamp(2rem, 4.4vw, 3rem);
 }
 
 .title-line:first-child {
-  font-size: 1.35rem;
-  margin-bottom: 4px;
-}
-
-.title-line:last-child {
-  font-size: clamp(2rem, 4.4vw, 3rem);
+  margin-bottom: 6px;
 }
 
 .subtitle {
@@ -126,6 +122,8 @@ body {
   margin: 0 0 0.72em;
 }
 
+/* STAGE DIRECTIONS */
+
 .stage-direction,
 .stage-inline {
   font-style: italic;
@@ -140,6 +138,8 @@ body {
   margin-top: -0.08em;
 }
 
+/* SPEAKER NAMES */
+
 .speaker {
   margin: 1.3em 0 0.3em;
   color: var(--accent-soft);
@@ -148,8 +148,10 @@ body {
   font-size: 1rem;
 }
 
+/* DIALOGUE */
+
 .line {
-  margin-left: 1em;
+  margin-left: 1.4em;
   color: var(--ink);
 }
 
@@ -207,12 +209,7 @@ body {
     margin-bottom: 28px;
   }
 
-  .title-line:first-child {
-    font-size: 1.2rem;
-    margin-bottom: 3px;
-  }
-
-  .title-line:last-child {
+  .title-line {
     font-size: 1.9rem;
   }
 
@@ -248,7 +245,7 @@ body {
   }
 
   .line {
-    margin-left: 0.8em;
+    margin-left: 1em;
   }
 
   .dedication {
